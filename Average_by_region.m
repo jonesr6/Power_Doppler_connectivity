@@ -16,9 +16,6 @@ for ii=1:nregions
 structure_id = st.id(ii);
 structure_name = st.safe_name(ii);
 [r,c,d] = ind2sub(size(AtlasCrop),find(AtlasCrop==structure_id)); % [row,col,depth]
-%r = r + dx; % Compensate for moving the volume
-%c = c + dy; % Compensate for moving the volume
-%d = d + dz; % Compensate for moving the volume
 idc = find(r>0 & r<=X & c>0 & c<=Y & d>0 & d<=Z);
 r2=r(idc);c2=c(idc);d2=d(idc);
 Regions =  [Regions; {structure_name}, {r2},{c2},{d2}];
