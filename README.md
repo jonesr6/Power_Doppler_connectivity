@@ -1,5 +1,5 @@
 # Power_Doppler_connectivity
-Calculate connectivity of 4D ultrasound power Doppler data by brain region. Requires 4D dataset registered to an atlas.
+Calculate connectivity of 4D ultrasound power Doppler data by brain region in MATLAB. Requires 4D dataset registered to an atlas.
 
 Connectivity_matrix.m is the wrapper used to load in data, calculate the connectivity matrix, and plot the resulting matrix. This script uses two helper functions, listed below.
 
