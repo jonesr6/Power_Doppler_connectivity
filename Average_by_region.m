@@ -1,10 +1,14 @@
 function powdop2 = Average_by_region(PowDoppler, st, AtlasCrop)
     % Average_by_region: Spatially average power doppler data by brain region
+    %
+    % Inputs:
     % PowDoppler: Power doppler data (depth,lateral,elevational,time)
     % st.safe_name: structure name
     % st.id: structure id
     % AtlasCrop: Atlas registered to brain power doppler volume, labeled with
     %            structure id's from st.id
+    %
+    % Output:
     % powdop2: Power doppler data, averaged by brain region (number of brain regions, time)
 
     nregions = length(st.id);
