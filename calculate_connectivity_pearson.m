@@ -1,9 +1,13 @@
 function ConnMat = calculate_connectivity_pearson(PD_reorg)
-    %calculate_connectivity_pearson: This function calculates the connectivity
-    %between voxels in time, using Pearson correlation between voxels
-    %PD_reorg: power doppler matrix collapsed into voxels x time
-    %ConnMat: connectivity between each pixel through time, only populating top
-    %         triangle of matrix
+    % calculate_connectivity_pearson: This function calculates the connectivity
+    %                                 between voxels in time, using Pearson correlation between voxels
+    %
+    % Input:
+    % PD_reorg: power doppler matrix collapsed into voxels x time
+    %
+    % Output:
+    % ConnMat: connectivity between each pixel through time, only populating top
+    %          triangle of matrix
 
     ConnMat = zeros(size(PD_reorg, 1)) + 0.0;
     first_flag = 1;
