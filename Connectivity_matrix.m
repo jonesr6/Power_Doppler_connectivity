@@ -2,10 +2,10 @@
 
 load('PD') % power doppler data (deps,lats,els,time)
 load('AtlasCrop') % cropped brain volume with labeled regions
-load('Regions') % regions labels
+load('Regions') % region labels, include region names in regions.safe_name and region values in regions.id
 
 % average power doppler signal over each region
-PD_reorg = Average_by_region(PD, st, AtlasCrop);
+PD_reorg = Average_by_region(PD, regions, AtlasCrop);
 
 % calculate connectivity between each region
 ConnMat = calculate_connectivity_pearson(PD_reorg);
